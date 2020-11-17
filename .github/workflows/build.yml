@@ -23,7 +23,9 @@ jobs:
         pip install platformio
     - name: Create env repo
       run: |
+        pwd
         cd ..
+        pwd
         ls
         mkdir LuosLib
         ls
@@ -37,8 +39,8 @@ jobs:
         ls
     - name: Run PlatformIO
       run: |
-        platformio run -d /home/runner/work/Luos/Examples/Projects/Button
-        platformio run -d /home/runner/work/Luos/Examples/Projects/Controller_motor
+        platformio run -d pwd/Examples/Projects/Button
+        platformio run -d Examples/Projects/Controller_motor
         platformio run -d Examples/Projects/Dc_motor
         platformio run -d Examples/Projects/Distance
         platformio run -d Examples/Projects/Dxl
