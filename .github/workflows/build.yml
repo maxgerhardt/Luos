@@ -32,24 +32,24 @@ jobs:
         export PLATFORMIO_LIB_EXTRA_DIRS=pwd/LuosLib
     - name: Run PlatformIO
       run: |
-        platformio run -d Examples/Projects/Button
-        platformio run -d Examples/Projects/Controller_motor
-        platformio run -d Examples/Projects/Dc_motor
-        platformio run -d Examples/Projects/Distance
-        platformio run -d Examples/Projects/Dxl
-        platformio run -d Examples/Projects/Gate
-        platformio run -d Examples/Projects/Gpio  
-        platformio run -d Examples/Projects/Handy 
-        platformio run -d Examples/Projects/Imu
-        platformio run -d Examples/Projects/Led
-        platformio run -d Examples/Projects/Led_strip
-        platformio run -d Examples/Projects/Light_sensor
-        platformio run -d Examples/Projects/Load
-        platformio run -d Examples/Projects/Potentiometer
-        platformio run -d Examples/Projects/Power_switch
-        platformio run -d Examples/Projects/Servo
-        platformio run -d Examples/Projects/Stepper
-        platformio run -d Examples/Projects/Bike_alarm/Alarm_controller
-        platformio run -d Examples/Projects/Bike_alarm/Start_controller
+        platformio run -d pwd/Examples/Projects/Button
+        platformio run -d pwd/Examples/Projects/Controller_motor
+        platformio run -d pwd/Examples/Projects/Dc_motor
+        platformio run -d pwd/Examples/Projects/Distance
+        platformio run -d pwd/Examples/Projects/Dxl
+        platformio run -d pwd/Examples/Projects/Gate
+        platformio run -d pwd/Examples/Projects/Gpio  
+        platformio run -d pwd/Examples/Projects/Handy 
+        platformio run -d pwd/Examples/Projects/Imu
+        platformio run -d pwd/Examples/Projects/Led
+        platformio run -d pwd/Examples/Projects/Led_strip
+        platformio run -d pwd/Examples/Projects/Light_sensor
+        platformio run -d pwd/Examples/Projects/Load
+        platformio run -d pwd/Examples/Projects/Potentiometer
+        platformio run -d pwd/Examples/Projects/Power_switch
+        platformio run -d pwd/Examples/Projects/Servo
+        platformio run -d pwd/Examples/Projects/Stepper
+        platformio run -d pwd/Examples/Projects/Bike_alarm/Alarm_controller
+        platformio run -d pwd/Examples/Projects/Bike_alarm/Start_controller
         
     
