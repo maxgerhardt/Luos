@@ -37,8 +37,8 @@ jobs:
         ls
     - name: Run PlatformIO
       run: |
-        platformio run -d Examples/Projects/Button
-        platformio run -d Examples/Projects/Controller_motor
+        platformio run -d /home/runner/work/LuosExamples/Projects/Button
+        platformio run -d /home/runner/work/LuosExamples/Projects/Controller_motor
         platformio run -d Examples/Projects/Dc_motor
         platformio run -d Examples/Projects/Distance
         platformio run -d Examples/Projects/Dxl
