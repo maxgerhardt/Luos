@@ -13,6 +13,14 @@ jobs:
     steps:
     - name: Check out Luos repository
       uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install platformio
     - name: Create env repo
       run: |
         cd ..
@@ -23,17 +31,11 @@ jobs:
         mv Luos/ LuosLib/
         export PLATFORMIO_LIB_EXTRA_DIRS=pwd/LuosLib
         cd Examples
-    - name: Set up Python
-      uses: actions/setup-python@v1
-      with:
-        python-version: '3.x'
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install platformio
+        pwd
+        ls
     - name: Run PlatformIO
       run: |
         platformio run -d Projects/Button
-        platformio run -d Projects/Controller_motor
+
         
     
