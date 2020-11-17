@@ -24,9 +24,9 @@ jobs:
     - name: Create env repo
       run: |
         cd ..
+        mkdir lib
         git clone https://github.com/Luos-io/LuosHAL.git
         git clone https://github.com/Luos-io/Examples.git
-        mkdir lib
         mv mv LuosHAL/ lib/
         mv mv Luos/ lib/
         export PLATFORMIO_LIB_EXTRA_DIRS=lib
