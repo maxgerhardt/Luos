@@ -22,6 +22,7 @@ jobs:
         mv LuosHAL/ LuosLib/
         mv Luos/ LuosLib/
         export PLATFORMIO_LIB_EXTRA_DIRS=pwd/LuosLib
+        cd Examples
     - name: Set up Python
       uses: actions/setup-python@v1
       with:
@@ -32,24 +33,7 @@ jobs:
         pip install platformio
     - name: Run PlatformIO
       run: |
-        platformio run -d Examples/Projects/Button
-        platformio run -d Examples/Projects/Controller_motor
-        platformio run -d Examples/Projects/Dc_motor
-        platformio run -d Examples/Projects/Distance
-        platformio run -d Examples/Projects/Dxl
-        platformio run -d Examples/Projects/Gate
-        platformio run -d Examples/Projects/Gpio  
-        platformio run -d Examples/Projects/Handy 
-        platformio run -d Examples/Projects/Imu
-        platformio run -d Examples/Projects/Led
-        platformio run -d Examples/Projects/Led_strip
-        platformio run -d Examples/Projects/Light_sensor
-        platformio run -d Examples/Projects/Load
-        platformio run -d Examples/Projects/Potentiometer
-        platformio run -d Examples/Projects/Power_switch
-        platformio run -d Examples/Projects/Servo
-        platformio run -d Examples/Projects/Stepper
-        platformio run -d Examples/Projects/Bike_alarm/Alarm_controller
-        platformio run -d Examples/Projects/Bike_alarm/Start_controller
+        platformio run -d Projects/Button
+        platformio run -d Projects/Controller_motor
         
     
