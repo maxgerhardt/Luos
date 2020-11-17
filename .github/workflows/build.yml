@@ -1,0 +1,56 @@
+name: Build
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, windows-latest, ubuntu-latest]
+
+    steps:
+    - name: Check out Luos repository
+      uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install platformio
+    - name: Create env repo
+      run: |
+        cd ..
+        git clone https://github.com/Luos-io/LuosHAL.git
+        git clone https://github.com/Luos-io/Examples.git
+        mkdir lib
+        mv mv LuosHAL/ lib/
+        mv mv Luos/ lib/
+        export PLATFORMIO_LIB_EXTRA_DIRS=lib
+        cd Examples/
+    - name: Run PlatformIO
+      run: |
+        platformio run -d Projects/Button
+        platformio run -d Projects/Controller_motor
+        platformio run -d Projects/Dc_motor
+        platformio run -d Projects/Distance
+        platformio run -d Projects/Dxl
+        platformio run -d Projects/Gate
+        platformio run -d Projects/Gpio  
+        platformio run -d Projects/Handy 
+        platformio run -d Projects/Imu
+        platformio run -d Projects/Led
+        platformio run -d Projects/Led_strip
+        platformio run -d Projects/Light_sensor
+        platformio run -d Projects/Load
+        platformio run -d Projects/Potentiometer
+        platformio run -d Projects/Power_switch
+        platformio run -d Projects/Servo
+        platformio run -d Projects/Stepper
+        platformio run -d Projects/Bike_alarm/Alarm_controller
+        platformio run -d Projects/Bike_alarm/Start_controller
+        
+    
