@@ -31,6 +31,7 @@ jobs:
         git clone https://github.com/Luos-io/LuosHAL.git
         git clone https://github.com/Luos-io/Examples.git
         export PLATFORMIO_LIB_EXTRA_DIRS=/home/runner/work/Luos
+        echo $PLATFORMIO_LIB_EXTRA_DIRS
     - name: Run PlatformIO
       run:
            |
