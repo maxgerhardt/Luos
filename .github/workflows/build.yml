@@ -33,7 +33,7 @@ jobs:
       run:
            |
         cd ..
-        cd Examples\Projects\Button
+        cd Examples/Projects/Button
         platformio run
         
 
