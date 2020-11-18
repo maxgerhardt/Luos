@@ -32,7 +32,9 @@ jobs:
     - name: Run PlatformIO
       run:
            |
-        ls
+        cd ..
+        cd Examples/Projects/Controller_motor
+        platformio run
         
 
         
