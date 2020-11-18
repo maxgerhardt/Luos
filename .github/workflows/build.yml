@@ -46,7 +46,7 @@ jobs:
         git checkout test
         cd ..
         export PLATFORMIO_LIB_EXTRA_DIRS=/home/runner/work/Luos/Luos
-        platformio run -d Examples/Projects/Button/
+        platformio run -v -d Examples/Projects/Button/ 
         
 
         
