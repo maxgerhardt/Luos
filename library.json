@@ -12,7 +12,7 @@
             "-I inc",
             "-I OD",
             "-I Robus/inc",
-            "-DVERSION=0.7.0"
+            "-DVERSION=0.8.0"
         ],
         "srcFilter": [
             "+<*.c>",
