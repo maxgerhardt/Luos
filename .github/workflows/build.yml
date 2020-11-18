@@ -27,12 +27,12 @@ jobs:
 #      uses: mxschmitt/action-tmate@v3
     - name: Create env repo
       run: 
-           |
+        ls   |
         git clone https://github.com/Luos-io/Luos.git
         git clone https://github.com/Luos-io/LuosHAL.git
         git clone https://github.com/Luos-io/Examples.git
         export PLATFORMIO_LIB_EXTRA_DIRS=/home/runner/work/Luos/Luos
-        echo $PLATFORMIO_LIB_EXTRA_DIRS
+        ls
     - name: Run PlatformIO
       run:
            |
