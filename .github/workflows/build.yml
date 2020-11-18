@@ -34,7 +34,7 @@ jobs:
       run: |
         cd Examples/Projects/Button
         ls
-        platformio run
+        
 
         
     
