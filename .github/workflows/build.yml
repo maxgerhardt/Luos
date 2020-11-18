@@ -30,13 +30,14 @@ jobs:
         cd ..
         git clone https://github.com/Luos-io/LuosHAL.git
         git clone https://github.com/Luos-io/Examples.git
-        export PLATFORMIO_LIB_EXTRA_DIRS=~/work/Luos
+        export PLATFORMIO_LIB_EXTRA_DIRS=/home/runner/work/Luos
     - name: Run PlatformIO
       run:
            |
         cd ..
-        cd Examples/Projects/Button
-        platformio run
+        cd Examples
+        git checkout pre_release
+        platformio run -d Projects/Button/
         
 
         
