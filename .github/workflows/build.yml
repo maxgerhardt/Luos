@@ -34,7 +34,12 @@ jobs:
            |
         cd ..
         ls
-        cd Examples/Projects/Controller_motor
+        cd Examples
+        ls
+        cd Projects
+        ls
+        cd Button
+        ls
         platformio run
         
 
