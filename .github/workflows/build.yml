@@ -31,7 +31,9 @@ jobs:
         mv Luos/ LuosLib/
         export PLATFORMIO_LIB_EXTRA_DIRS=pwd/LuosLib
     - name: Run PlatformIO
-      run: |
+      run:
+           |
+        pwd
         cd Examples/Projects/Button
         ls
         
