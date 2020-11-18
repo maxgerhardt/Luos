@@ -16,32 +16,24 @@ jobs:
       with:
         python-version: '3.x'
     - name: Install dependencies
-      run: |
+      run: 
+          |
         python -m pip install --upgrade pip
         pip install platformio
     - name: Check out Luos repository
       uses: actions/checkout@v2
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
     - name: Create env repo
-      run: |
+      run: 
+           |
         cd ..
-        ls
         git clone https://github.com/Luos-io/LuosHAL.git
         git clone https://github.com/Luos-io/Examples.git
-        ls
-        pwd
-        export PLATFORMIO_LIB_EXTRA_DIRS=pwd
+        export PLATFORMIO_LIB_EXTRA_DIRS=~/work/Luos
     - name: Run PlatformIO
       run:
            |
         cd ..
-        cd Examples 
-        ls
-        cd Projects
-        ls
-        cd Button
-        ls
+        cd Examples\Projects\Button
         platformio run
         
 
