@@ -32,7 +32,9 @@ jobs:
     - name: Run PlatformIO
       run:
            |
-        platformio run -d Examples/Projects/Button
+        cd Examples/Projects/Button
+        ls
+        platformio run
         
 
         
