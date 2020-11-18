@@ -30,10 +30,10 @@ jobs:
         mv LuosHAL/ LuosLib/
         mv Luos/ LuosLib/
         export PLATFORMIO_LIB_EXTRA_DIRS=pwd/LuosLib
-        
     - name: Run PlatformIO
       run: |
         cd Examples/Projects/Button
+        ls
         platformio run
 
         
