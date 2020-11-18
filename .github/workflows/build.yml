@@ -33,6 +33,7 @@ jobs:
       run:
            |
         cd ..
+        ls
         cd Examples/Projects/Controller_motor
         platformio run
         
