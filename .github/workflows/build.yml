@@ -11,14 +11,6 @@ jobs:
         os: [macos-latest, windows-latest, ubuntu-latest]
 
     steps:
-    - name: Set up Python
-      uses: actions/setup-python@v1
-      with:
-        python-version: '3.x'
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install platformio
     - name: Check out Luos repository
       uses: actions/checkout@v2
     - name: Create env repo
@@ -29,6 +21,14 @@ jobs:
         git clone https://github.com/Luos-io/Examples.git
         ls
         export PLATFORMIO_LIB_EXTRA_DIRS=pwd
+    - name: Set up Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install platformio
     - name: Run PlatformIO
       run:
            |
