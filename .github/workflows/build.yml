@@ -20,6 +20,7 @@ jobs:
         git clone https://github.com/Luos-io/LuosHAL.git
         git clone https://github.com/Luos-io/Examples.git
         ls
+        pwd
         export PLATFORMIO_LIB_EXTRA_DIRS=pwd
     - name: Set up Python
       uses: actions/setup-python@v1
@@ -33,8 +34,7 @@ jobs:
       run:
            |
         cd ..
-        ls
-        cd Examples
+        cd Examples 
         ls
         cd Projects
         ls
