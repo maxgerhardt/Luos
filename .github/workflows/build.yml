@@ -32,7 +32,6 @@ jobs:
         git clone https://github.com/Luos-io/Luos.git
         git clone https://github.com/Luos-io/LuosHAL.git
         git clone https://github.com/Luos-io/Examples.git
-        export PLATFORMIO_LIB_EXTRA_DIRS=/home/runner/work/Luos/Luos
         ls
     - name: Run PlatformIO
       run:
@@ -46,6 +45,7 @@ jobs:
         cd LuosHAL
         git checkout test
         cd ..
+        export PLATFORMIO_LIB_EXTRA_DIRS=/home/runner/work/Luos/Luos
         platformio run -d Examples/Projects/Button/
         
 
