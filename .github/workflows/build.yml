@@ -8,7 +8,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macos-latest, windows-latest, ubuntu-latest]
+#        os: [macos-latest, windows-latest, ubuntu-latest]
+        os: [ubuntu-latest]
 
     steps:
     - name: Set up Python
@@ -20,14 +21,14 @@ jobs:
           |
         python -m pip install --upgrade pip
         pip install platformio
-    - name: Check out Luos repository
+#    - name: Check out Luos repository
 #      uses: actions/checkout@v2
 #    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
+#      uses: mxschmitt/action-tmate@v3
     - name: Create env repo
       run: 
            |
-        cd ..
+        git clone https://github.com/Luos-io/Luos.git
         git clone https://github.com/Luos-io/LuosHAL.git
         git clone https://github.com/Luos-io/Examples.git
         export PLATFORMIO_LIB_EXTRA_DIRS=/home/runner/work/Luos
@@ -38,7 +39,14 @@ jobs:
         cd ..
         cd Examples
         git checkout pre_release
-        platformio run -d Projects/Button/
+        cd ..
+        cd Luos
+        git checkout workflow
+        cd ..
+        cd LuosHAL
+        git checkout test
+        cd ..
+        platformio run -d Examples/Projects/Button/
         
 
         
