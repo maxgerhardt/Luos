@@ -11,7 +11,7 @@ jobs:
 #        os: [macos-latest, windows-latest, ubuntu-latest]
         os: [windows-latest]
     env:
-        PLATFORMIO_LIB_EXTRA_DIRS=/home/runner/work/Luos/Luos
+        PLATFORMIO_LIB_EXTRA_DIRS: /home/runner/work/Luos/Luos
     steps:
     - name: Set up Python
       uses: actions/setup-python@v1
