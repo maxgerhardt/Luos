@@ -12,6 +12,9 @@ jobs:
         os: [windows-latest]
 
     steps:
+    - name: environnement var 
+      env:
+        PLATFORMIO_LIB_EXTRA_DIRS :/home/runner/work/Luos/Luos
     - name: Set up Python
       uses: actions/setup-python@v1
       with:
@@ -45,7 +48,7 @@ jobs:
         cd LuosHAL
         git checkout test
         cd ..
-        export PLATFORMIO_LIB_EXTRA_DIRS=/home/runner/work/Luos/Luos
+#        export PLATFORMIO_LIB_EXTRA_DIRS=/home/runner/work/Luos/Luos
         platformio run -v -d Examples/Projects/Button/ 
         
 
