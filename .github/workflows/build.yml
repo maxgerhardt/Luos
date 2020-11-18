@@ -13,6 +13,8 @@ jobs:
     steps:
     - name: Check out Luos repository
       uses: actions/checkout@v2
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
     - name: Create env repo
       run: |
         cd ..
@@ -30,8 +32,6 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install platformio
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
     - name: Run PlatformIO
       run:
            |
