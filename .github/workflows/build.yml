@@ -22,7 +22,6 @@ jobs:
         mv LuosHAL/ LuosLib/
         mv Luos/ LuosLib/
         export PLATFORMIO_LIB_EXTRA_DIRS=pwd/LuosLib
-        cd Examples
     - name: Set up Python
       uses: actions/setup-python@v1
       with:
