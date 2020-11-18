@@ -22,8 +22,6 @@ jobs:
         pip install platformio
     - name: Check out Luos repository
       uses: actions/checkout@v2
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
     - name: Create env repo
       run: 
            |
@@ -32,6 +30,8 @@ jobs:
         git clone https://github.com/Luos-io/Examples.git
         export PLATFORMIO_LIB_EXTRA_DIRS=/home/runner/work/Luos
         echo $PLATFORMIO_LIB_EXTRA_DIRS
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
     - name: Run PlatformIO
       run:
            |
