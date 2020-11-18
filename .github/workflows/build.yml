@@ -37,7 +37,7 @@ jobs:
       run:
         env:
         PLATFORMIO_LIB_EXTRA_DIRS :/home/runner/work/Luos/Luos
-        
+         |
         cd Examples
         git checkout pre_release
         cd ..
