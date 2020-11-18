@@ -12,9 +12,6 @@ jobs:
         os: [windows-latest]
 
     steps:
-    - name: environnement var 
-      env:
-        PLATFORMIO_LIB_EXTRA_DIRS :/home/runner/work/Luos/Luos
     - name: Set up Python
       uses: actions/setup-python@v1
       with:
@@ -38,7 +35,9 @@ jobs:
         ls
     - name: Run PlatformIO
       run:
-           |
+        env:
+        PLATFORMIO_LIB_EXTRA_DIRS :/home/runner/work/Luos/Luos
+        
         cd Examples
         git checkout pre_release
         cd ..
